@@ -1,0 +1,11 @@
+python manage.py createsuperuser
+CSRF_TRUSTED_ORIGINS = []
+
+Em settings INSTALLED APPs adicionar "LOJA", 
+e no arquivo urls.py do Projeto apontar para o arquivo loja.urls com o comando:
+    path('loja/', include('loja.urls'))
+
+Então crie um arquivo urls.py na loja e adicione os caminhos que criou nas views,
+se lembre também de importar as views no arquivo urls.py "from . import views"
+
+Nas views se lembre na função de chamar o pequisar(request)
